@@ -1,0 +1,453 @@
+<?xml version="1.0" ?>
+<!--engine config file-->
+<Config>
+
+    <VarSet
+        name="GasGuzzlers">
+
+        <Var
+            name="Database"
+            type="String"
+            value="Database/Database.xml" />
+        <Var
+            name="Language"
+            type="String"
+            value="en" />
+        <Var
+            name="MinCameraFOV"
+            type="Float"
+            value="60.000000" />
+        <Var
+            name="MaxCameraFOV"
+            type="Float"
+            value="70.000000" />
+        <Var
+            name="DrawEntityAxis"
+            type="Bool"
+            value="0" />
+        <Var
+            name="DrawEntityAABB"
+            type="Bool"
+            value="0" />
+        <Var
+            name="CurrentProfile"
+            type="String"
+            value="" />
+        <Var
+            name="DisableAero"
+            type="Bool"
+            value="1" />
+    </VarSet>
+    <VarSet
+        name="Rendering">
+
+        <Var
+            name="ShowCursor"
+            type="Bool"
+            value="0" />
+        <Var
+            name="CursorAutoHideTime"
+            type="Float"
+            value="-1.000000" />
+        <Var
+            name="FullScreen"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseVsync"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseZPrepass"
+            type="Bool"
+            value="0" />
+        <Var
+            name="BackBufferColorDepth"
+            type="Int"
+            value="32" />
+        <Var
+            name="UseScreenFiltering"
+            type="Bool"
+            value="1" />
+        <Var
+            name="PixelSize"
+            type="Float"
+            value="1.000000" />
+        <Var
+            name="RenderingDistanceFactor"
+            type="Float"
+            value="1.000000" />
+        <Var
+            name="ShadowRenderingDistanceFactor"
+            type="Float"
+            value="1.000000" />
+        <Var
+            name="Gamma"
+            type="Float"
+            value="1.000000" />
+        <Var
+            name="Exposure"
+            type="Float"
+            value="1.000000" />
+        <Var
+            name="UseShadows"
+            type="Bool"
+            value="1" />
+        <Var
+            name="ShadowmapSize"
+            type="Int"
+            value="1024" />
+        <Var
+            name="ShadowFilteringType"
+            type="Int"
+            value="0" />
+        <Var
+            name="UseBlueShift"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseStarEffect"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseBloom"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseToneMapping"
+            type="Bool"
+            value="1" />
+        <Var
+            name="ToneMiddleGray"
+            type="Float"
+            value="0.880000" />
+        <Var
+            name="ToneLumWhite"
+            type="Float"
+            value="1.120000" />
+        <Var
+            name="BloomMiddleGray"
+            type="Float"
+            value="0.580000" />
+        <Var
+            name="BloomThreshold"
+            type="Float"
+            value="1.376000" />
+        <Var
+            name="BloomOffset"
+            type="Float"
+            value="5.711900" />
+        <Var
+            name="StarMiddleGray"
+            type="Float"
+            value="0.750000" />
+        <Var
+            name="StarThreshold"
+            type="Float"
+            value="5.560000" />
+        <Var
+            name="StarOffset"
+            type="Float"
+            value="5.070000" />
+        <Var
+            name="HDRGamma"
+            type="Float"
+            value="1.320000" />
+        <Var
+            name="HDRExposure"
+            type="Float"
+            value="1.000000" />
+        <Var
+            name="ScreenColor"
+            type="Vector4"
+            value="1.000000, 1.000000, 1.000000, 1.000000" />
+        <Var
+            name="FocalDistance"
+            type="Float"
+            value="0.020000" />
+        <Var
+            name="DOFPower"
+            type="Float"
+            value="0.450000" />
+        <Var
+            name="UseMotionBlur"
+            type="Bool"
+            value="0" />
+        <Var
+            name="MotionBlurPower"
+            type="Float"
+            value="0.400000" />
+        <Var
+            name="UseSSAmbientOcclusion"
+            type="Bool"
+            value="0" />
+        <Var
+            name="MipMapLODBias"
+            type="Float"
+            value="0.000000" />
+        <Var
+            name="TextureQuality"
+            type="Int"
+            value="3" />
+        <Var
+            name="TextureFiltering"
+            type="Int"
+            value="0" />
+        <Var
+            name="MaxAnisotropy"
+            type="Int"
+            value="8" />
+        <Var
+            name="UseParticleSystem"
+            type="Bool"
+            value="1" />
+        <Var
+            name="UseVolumetricLightScattering"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseFog"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseAntiAliasing"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseRefraction"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseDepthOfField"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseScreenBlur"
+            type="Bool"
+            value="0" />
+        <Var
+            name="ParticleSystemQuality"
+            type="Int"
+            value="3" />
+        <Var
+            name="EnableSoftParticles"
+            type="Bool"
+            value="1" />
+    </VarSet>
+    <VarSet
+        name="Engine">
+
+        <Var
+            name="Name"
+            type="String"
+            value="GasGuzzlersServer" />
+        <Var
+            name="Version"
+            type="String"
+            value="1.3.1.0" />
+        <Var
+            name="ProjectDataPath"
+            type="String"
+            value="Data/GasGuzzlers/" />
+        <Var
+            name="WindowPosX"
+            type="Int"
+            value="0" />
+        <Var
+            name="WindowPosY"
+            type="Int"
+            value="0" />
+        <Var
+            name="ScreenWidth"
+            type="Int"
+            value="1024" />
+        <Var
+            name="ScreenHeight"
+            type="Int"
+            value="768" />
+        <Var
+            name="StartScene"
+            type="String"
+            value="Menu" />
+        <Var
+            name="UseDirectInputMouse"
+            type="Bool"
+            value="0" />
+        <Var
+            name="ConsoleEnabled"
+            type="Bool"
+            value="1" />
+        <Var
+            name="EnableEngineStat"
+            type="Bool"
+            value="1" />
+        <Var
+            name="ConsoleAutoExec"
+            type="String"
+            value="" />
+    </VarSet>
+    <VarSet
+        name="MusicEngine">
+
+        <Var
+            name="Enabled"
+            type="Bool"
+            value="0" />
+    </VarSet>
+    <VarSet
+        name="Gui">
+
+        <Var
+            name="Skin"
+            type="String"
+            value="BaseData/GUI/Skins/DarkRoom.xml" />
+        <Var
+            name="RenderTextShadow"
+            type="Bool"
+            value="1" />
+    </VarSet>
+    <VarSet
+        name="Network">
+
+        <Var
+            name="MasterServerHost"
+            type="String"
+            value="85.94.70.130" />
+        <Var
+            name="DedicatedServerPort"
+            type="Int"
+            value="3555" />
+        <Var
+            name="MasterServerPort"
+            type="Int"
+            value="3554" />
+        <Var
+            name="ReportToMasterServer"
+            type="Bool"
+            value="1" />
+        <Var
+            name="ReportToMasterServerRate"
+            type="Float"
+            value="20.000000" />
+        <Var
+            name="ServerSendDataRate"
+            type="Float"
+            value="0.016667" />
+        <Var
+            name="TrackRotationIDList"
+            type="String"
+            value="1512;1495;568;518;636;531;1443;556;647;590;602;1231;579;505;658;613;1228;1436;669;1441;1438;1448;804;625;1450;693;1439;1449;680;1445;1437;1440;1447;1442;" />
+        <Var
+            name="RaceTypeRotationIDList"
+            type="String"
+            value="1;" />
+        <Var
+            name="NumberOfLaps"
+            type="Int"
+            value="3" />
+        <Var
+            name="SendGeometryDamage"
+            type="Bool"
+            value="0" />
+        <Var
+            name="UseRandomMap"
+            type="Bool"
+            value="1" />
+        <Var
+            name="UseRandomRaceType"
+            type="Bool"
+            value="0" />
+        <Var
+            name="WelcomeMessages"
+            type="String"
+            value="Namens De Feestcommissie, Proficiat!" />
+        <Var
+            name="ServerMessages"
+            type="String"
+            value="www.DeFeestcommissie.tk;We also host COD2 and COD4 gameservers;" />
+        <Var
+            name="ServerMessageRate"
+            type="Float"
+            value="60.000000" />
+        <Var
+            name="ServerName"
+            type="String"
+            value="DFC" />
+        <Var
+            name="PlayerTimeout"
+            type="Float"
+            value="20.000000" />
+        <Var
+            name="RubberBandingType"
+            type="Int"
+            value="1" />
+        <Var
+            name="SynchronizeCarParts"
+            type="Bool"
+            value="1" />
+        <Var
+            name="DeathmatchMaxKillsCount"
+            type="Int"
+            value="10" />
+        <Var
+            name="DeathmatchMaxRaceTime"
+            type="Float"
+            value="600.000000" />
+        <Var
+            name="ArcadeMode"
+            type="Bool"
+            value="0" />
+        <Var
+            name="FinishRaceTimeout"
+            type="Float"
+            value="30.000000" />
+        <Var
+            name="VoteFlagKickPlayer"
+            type="Bool"
+            value="1" />
+        <Var
+            name="VoteFlagChangeTrack"
+            type="Bool"
+            value="1" />
+        <Var
+            name="VoteFlagChangeRaceType"
+            type="Bool"
+            value="1" />
+        <Var
+            name="VoteFlagRestartTournament"
+            type="Bool"
+            value="1" />
+        <Var
+            name="ServerPassword"
+            type="String"
+            value="" />
+        <Var
+            name="UseRespawn"
+            type="Bool"
+            value="1" />
+        <Var
+            name="VoteFlagChangeRubberBanding"
+            type="Bool"
+            value="1" />
+        <Var
+            name="VoteFlagChangeRespawn"
+            type="Bool"
+            value="1" />
+    </VarSet>
+    <VarSet
+        name="UserSettings">
+
+        <Var
+            name="engine_console_window_placement"
+            type="Vector4"
+            value="34.000000, 73.000000, 488.000000, 747.000000" />
+        <Var
+            name="GraphWindowPlacement"
+            type="Vector4"
+            value="112.000000, 284.000000, 800.000000, 200.000000" />
+        <Var
+            name="ConsoleWindowPlacement"
+            type="Vector4"
+            value="0.000000, 0.000000, 1024.000000, 384.000000" />
+    </VarSet>
+</Config>
