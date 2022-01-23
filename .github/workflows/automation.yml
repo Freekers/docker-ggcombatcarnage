@@ -5,6 +5,10 @@ on:
     # * is a special character in YAML so you have to quote this string
     - cron:  '11 11 1 * *'
 
+env:
+  STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
+  STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
+
 jobs:
   docker:
     runs-on: ubuntu-latest
