@@ -7,7 +7,7 @@ RUN export DEBIAN_FRONTEND noninteractive && \
     echo en_US.UTF-8 UTF-8 >> /etc/locale.gen && locale-gen && \
     curl -s https://dl.winehq.org/wine-builds/winehq.key | apt-key add - && \
     apt-add-repository -y 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' && \
-    apt-get install -y wine-staging=5.7~focal wine-staging-i386=5.7~focal wine-staging-amd64=5.7~focal winetricks && \
+    apt-get install -y winehq-stable winetricks && \
     rm -rf /var/lib/apt/lists/* && \
     ln -s '/home/user/Steam/steamapps/common/Gas Guzzlers Combat Carnage/' /server && \
     useradd -m user
