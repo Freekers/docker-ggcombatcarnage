@@ -24,4 +24,4 @@ cd "$GAMEDIR"
 
 [ "$1" = "bash" ] && exec "$@"
 
-/opt/wine-staging/bin/wine ./GGDedicatedServer.exe
+wine ./GGDedicatedServer.exe
