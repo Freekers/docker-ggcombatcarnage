@@ -10,7 +10,7 @@
 GAMEDIR="$HOME/Steam/steamapps/common/Gas Guzzlers Combat Carnage/Bin32"
 
 cd "$HOME"
-STEAMCMD="./steamcmd.sh +@sSteamCmdForcePlatformType windows +login ${{ secrets.STEAM_USERNAME }} ${{ secrets.STEAM_PASSWORD }} $STEAMCMD"
+STEAMCMD="./steamcmd.sh +@sSteamCmdForcePlatformType windows +login $STEAM_USERNAME $STEAM_PASSWORD $STEAMCMD"
 
 # eval to support quotes in $STEAMCMD
 eval "$STEAMCMD +app_update 596620 +quit"
