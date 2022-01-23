@@ -1,11 +1,11 @@
 version: '3.7'
 services:
   ggcombatcarnage:
-    image: freekers/docker-ggcombatcarnage:latest
+    image: gasguzzlers:1
     container_name: ggcombatcarnage
     restart: always
     volumes:
-	 - /opt/gasguzzlers/gamedir:/home/user/Steam
+      - /opt/gasguzzlers/gamedir:/home/user/Steam
     ports:
       - 3555:3555/udp
       - 3555:3555/tcp
