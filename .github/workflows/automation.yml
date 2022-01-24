@@ -12,8 +12,8 @@ jobs:
       - name: Variable Substitution
         uses: Slidem/inplace-envsubst-action@v1.0.0
         env:
-          STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
-          STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
+          STEAM_USERNAME: "${{ secrets.STEAM_USERNAME }}"
+          STEAM_PASSWORD: "${{ secrets.STEAM_PASSWORD }}"
         with:
           fail_on_missing_variables: "true"
           search_input: |
