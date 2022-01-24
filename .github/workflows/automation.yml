@@ -15,7 +15,7 @@ jobs:
           STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
           STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
         with:
-          fail-on-missing-variables: "true"
+          fail_on_missing_variables: "true"
           search_input: |
             {
               "files": ["entrypoint.sh"],
