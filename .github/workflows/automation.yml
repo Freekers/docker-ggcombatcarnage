@@ -15,6 +15,7 @@ jobs:
           STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
           STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
         with:
+          working-directory: ""
           fail_on_missing_variables: "true"
           search_input: |
             {
