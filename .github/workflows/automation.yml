@@ -9,6 +9,8 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:  
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Variable Substitution
         uses: Slidem/inplace-envsubst-action@v1.0.0
         env:
