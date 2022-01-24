@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Variable Substitution
-        uses: Slidem/inplace-envsubst-action@v1.0.0
+        uses: Slidem/inplace-envsubst-action@v1.2.2
         env:
           STEAM_USERNAME: "${{ secrets.STEAM_USERNAME }}"
           STEAM_PASSWORD: "${{ secrets.STEAM_PASSWORD }}"
