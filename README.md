@@ -9,7 +9,7 @@ Sadly I cannot provide you with a prebuilt image, because in order to download t
 
 In order to do so, clone this repository or copy the contents of `Dockerfile` and `entrypoint.sh`, because those are the only two files you need to build the image.
 
-Next, edit `entrypoint.sh` and replace `${{ secrets.STEAM_USERNAME }}` with your Steam username and `${{ secrets.STEAM_PASSWORD }}` with your Steam password. 
+Next, edit `entrypoint.sh` and replace the entire `#{STEAM_USERNAME}#` string with your Steam username and replace the entire `#{STEAM_PASSWORD}#` string with your Steam password. 
 Note: Since Docker image building is non-interactive, Steam Guard must be disabled, as you cannot enter your Steam Guard code during the build. Hence it is recommended that you create a new Steam account just for your dedicated server, which indeed requires you to re-purchase the game.
 
 Afterwards, type the following command to build the image: `docker build -t gasguzzlers:1`. This can take a while.
