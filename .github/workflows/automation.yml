@@ -12,8 +12,6 @@ jobs:
       - name: Variable Substitution
         uses: cschleiden/replace-tokens@v1.1
         with:
-          tokenPrefix: '${'
-          tokenSuffix: '}'
           files: '["**/*.sh"]'
         env:
           STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
