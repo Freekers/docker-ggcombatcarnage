@@ -8,21 +8,16 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
-    steps:  
-      - name: Checkout
-        uses: actions/checkout@v2
+    steps:
       - name: Variable Substitution
-        uses: Slidem/inplace-envsubst-action@v1.2.2
+        uses: cschleiden/replace-tokens@v1.1
+        with:
+          tokenPrefix: '${'
+          tokenSuffix: '}'
+          files: '["entrypoint.sh"]'
         env:
           STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
           STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
-        with:
-          fail_on_missing_variables: "true"
-          search_input: |
-            {
-              "files": ["entrypoint.sh"],
-              "depth": 1
-            }
       - name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
