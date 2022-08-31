@@ -3,7 +3,7 @@ FROM ubuntu:focal
 RUN export DEBIAN_FRONTEND noninteractive && \
     dpkg --add-architecture i386 && \
     apt-get update && \
-    apt-get install -y socat net-tools tar unzip curl xz-utils gnupg2 software-properties-common xvfb libc6:i386 locales && \
+    apt-get install -y net-tools tar unzip curl xz-utils gnupg2 software-properties-common xvfb libc6:i386 locales && \
     echo en_US.UTF-8 UTF-8 >> /etc/locale.gen && locale-gen && \
     curl -s https://dl.winehq.org/wine-builds/winehq.key | apt-key add - && \
     apt-add-repository -y 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' && \
@@ -28,7 +28,7 @@ RUN mkdir /tmp/.X11-unix && chmod 1777 /tmp/.X11-unix
 ENV WINEDEBUG=fixme-all
 
 # check server info every 30 seconds
-HEALTHCHECK --interval=30s --timeout=5s --retries=5 CMD if [ -z "$(socat - tcp:127.0.0.1:${CHECK_PORT})" ]; then exit 1; else exit 0; fi
+HEALTHCHECK --interval=30s --timeout=5s --retries=5 CMD curl --fail telnet://127.0.0.1:${CHECK_PORT} || exit 1
     
 EXPOSE 3555/udp
 EXPOSE 3555/tcp
