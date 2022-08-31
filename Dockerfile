@@ -28,7 +28,7 @@ RUN mkdir /tmp/.X11-unix && chmod 1777 /tmp/.X11-unix
 ENV WINEDEBUG=fixme-all
 
 # check server info every 30 seconds
-HEALTHCHECK --interval=30s --timeout=5s --retries=5 CMD if [ -z "$(socat - udp:${CHECK_IP}:${CHECK_PORT})" ]; then exit 1; else exit 0; fi
+HEALTHCHECK --interval=30s --timeout=5s --retries=5 CMD if [ -z "$(socat - tcp:127.0.0.1:${CHECK_PORT})" ]; then exit 1; else exit 0; fi
     
 EXPOSE 3555/udp
 EXPOSE 3555/tcp
