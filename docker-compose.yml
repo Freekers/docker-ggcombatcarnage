@@ -6,6 +6,8 @@ services:
     restart: always
     volumes:
       - /opt/gasguzzlers/gamedir:/home/user/Steam
+    environment:
+     CHECK_PORT: 3555
     ports:
       - 3555:3555/udp
       - 3555:3555/tcp
