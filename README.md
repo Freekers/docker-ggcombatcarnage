@@ -25,6 +25,29 @@ docker run -di -p 3555:3555/udp -p 3555:3555/tcp --restart unless-stopped -v $PW
 ```
 An example docker-compose.yml can be found in this repository as well
 
+## Healthcheck and Server Restarts
+
+There are two types of restarts:
+
+1. If the container would stop for some reason (e.g. GGDedicatedServer.exe crashes) - Docker will restart it automatically ('restart' part in docker-compose.yml)
+
+1. If for some reason the container would still run, but the `healthcheck` fails (e.g. the GGDedicatedServer.exe process is frozen), the Docker container will be marked as 'unhealthy'. However, in this case, the container wouldn't be restarted automatically by Docker. For this you need an additional Docker image called `autoheal`. Here's a docker-compose.yml example for autoheal:
+```
+    version: '3.7'
+      services:
+        autoheal:
+          image: willfarrell/autoheal
+          container_name: autoheal
+          restart: always
+          volumes:
+           - /var/run/docker.sock:/var/run/docker.sock
+          environment:
+           AUTOHEAL_CONTAINER_LABEL: "all"
+```
+AUTOHEAL_CONTAINER_LABEL with value "all" means that all unhealthy containers would be restarted.
+
+If you change the default server port, i.e. 3555, then make sure the `CHECK_PORT` in your Docker run command or docker-compose matches your custom server port.
+
 ## Customizing your server
 After starting the server, you can edit the GGDedicatedServer.xml file at 'gamedir/steamapps/common/Gas Guzzlers Combat Carnage/Bin32/GGDedicatedServer.xml'. You'll need to restart the docker container after editing.
 
